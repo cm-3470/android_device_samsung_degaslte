@@ -49,11 +49,11 @@ void vendor_load_properties()
     property_get("ro.bootloader", bootloader);
 
     if (strstr(bootloader, "T235Y")) {
-        /* TODO: degaslte... */
-	property_set("ro.build.fingerprint", "samsung/degasltexx/degaslte:4.4.2/KOT49H/T235XXU1AOD1:user/release-keys");
-	property_set("ro.build.description", "degasltexx-user 4.4.2 KOT49H T235XXU1AOD1 release-keys");
+        /* degasltezt */
+	property_set("ro.build.fingerprint", "samsung/degasltezt/degaslte:4.4.2/KOT49H/T235YZTU1AOD1:user/release-keys");
+	property_set("ro.build.description", "degasltezt-user 4.4.2 KOT49H T235YZTU1AOD1 release-keys");
         property_set("ro.product.model", "SM-T235Y");
-        property_set("ro.product.device", "degasltexx");
+        property_set("ro.product.device", "degasltezt");
     } else if (strstr(bootloader, "T235")) {
         /* degasltexx */
         property_set("ro.build.fingerprint", "samsung/degasltexx/degaslte:4.4.2/KOT49H/T235XXU1AOD1:user/release-keys");

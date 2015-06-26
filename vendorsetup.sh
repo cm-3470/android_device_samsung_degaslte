@@ -1,0 +1,3 @@
+add_lunch_combo cm_degaslte-eng
+add_lunch_combo cm_degaslte-user
+add_lunch_combo cm_degaslte-userdebug

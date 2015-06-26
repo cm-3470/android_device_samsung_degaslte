@@ -1,5 +1,5 @@
 # General
-csc/sales_code.dat
+##csc/sales_code.dat
 lib/libcsc.so
 # Needed by libcsc.so
 lib/libion_exynos.so
@@ -11,17 +11,17 @@ lib/libexynosv4l2.so
 
 # Bluetooth
 vendor/firmware/bcm4334.hcd
-vendor/firmware/BT_FW_VER_BCM4334B0_002.001.013.1792.1803_K_Mini.hcd
+vendor/firmware/BT_FW_VER_BCM4334B0_002.001.013.1806.2003_Degas_LTE_ORC.hcd
 
 # Camera
 lib/hw/camera.universal3470.so
 # Needed by "camera.universal3470.so"
 lib/libhwjpeg.so
-lib/libexynoscamera.so
+##lib/libexynoscamera.so
 # Needed by libexynoscamera.so
-lib/libliveframework.so
+##lib/libliveframework.so
 # Needed by "libliveframework.so"
-lib/libarcsoft_nighthawk.so
+##lib/libarcsoft_nighthawk.so
 
 # DRM
 etc/srm.bin
@@ -84,19 +84,33 @@ bin/lpm
 # Needed by lpm
 lib/libmaet.so
 lib/libsxqk_skia.so
-media/wireless_left.spi
-media/wireless_right.spi
-media/battery_cover.spi
-media/battery_error.spi
-media/particle_intro.spi
-media/particle_loop.spi
-media/lcd_density.txt
-media/percentage.spi
-media/battery_temperature_error.spi
-media/battery_low.spi
-media/wave_loop.spi
-media/incompatible_charger.spi
-media/battery_temperature_limit.spi
+media/battery_batteryerror.qmg
+media/battery_charging_100.qmg
+media/battery_charging_10.qmg
+media/battery_charging_15.qmg
+media/battery_charging_20.qmg
+media/battery_charging_25.qmg
+media/battery_charging_30.qmg
+media/battery_charging_35.qmg
+media/battery_charging_40.qmg
+media/battery_charging_45.qmg
+media/battery_charging_50.qmg
+media/battery_charging_55.qmg
+media/battery_charging_5.qmg
+media/battery_charging_60.qmg
+media/battery_charging_65.qmg
+media/battery_charging_70.qmg
+media/battery_charging_75.qmg
+media/battery_charging_80.qmg
+media/battery_charging_85.qmg
+media/battery_charging_90.qmg
+media/battery_charging_95.qmg
+media/battery_error.qmg
+media/bootsamsungloop.qmg
+media/bootsamsung.qmg
+media/chargingwarning.qmg
+media/Disconnected.qmg
+media/shutdown.qmg
 
 # Media
 vendor/firmware/fimc_is_fw2.bin
@@ -105,13 +119,8 @@ vendor/firmware/setfile_4h5.bin
 vendor/firmware/setfile_6a3.bin
 vendor/firmware/setfile_6b2.bin
 
-# NFC
-lib/hw/nfc_nci.universal3470.so
-etc/sec_s3fwrn5_rfreg.bin
-vendor/firmware/sec_s3fwrn5_firmware.bin
-
 # Boot script (handles deferred kernels init-calls, e.g. for Wifi driver startup)
-etc/init.sec.boot.sh
+#etc/init.sec.boot.sh
 
 # MobiCore
 bin/mcDriverDaemon
@@ -131,6 +140,7 @@ app/mcRegistry/ffffffff00000000000000000000000e.tlbin
 app/mcRegistry/ffffffff00000000000000000000000f.tlbin
 app/mcRegistry/ffffffff000000000000000000000012.tlbin
 app/mcRegistry/ffffffff000000000000000000000013.tlbin
+app/mcRegistry/ffffffff000000000000000000000017.tlbin
 app/mcRegistry/ffffffff000000000000000000000018.tlbin
 app/mcRegistry/ffffffffd00000000000000000000004.tlbin
 app/mcRegistry/ffffffffd0000000000000000000000a.tlbin
@@ -157,7 +167,7 @@ lib/omx/libOMX.Exynos.MPEG4.Encoder.so
 
 # Radio
 bin/at_distributor
-etc/plmn_delta.bin
+##etc/plmn_delta.bin
 etc/plmn_se13.bin
 lib/libatparser.so
 lib/libfactoryutil.so
@@ -168,12 +178,12 @@ lib/libsecnativefeature.so
 
 # Sensors
 lib/hw/sensors.universal3470.so
-lib/libinvensense_hal.so
+##lib/libinvensense_hal.so
 # Needed by "libinvensense_hal.so"
-lib/libmllite.so
-lib/libmplmpu.so
+##lib/libmllite.so
+##lib/libmplmpu.so
 # GeomagneticSensor:
-lib/libacdapi_clb.so
+##lib/libacdapi_clb.so
 
 # Wifi
 bin/macloader
@@ -190,7 +200,7 @@ lib/libsamsungRecord_ns.so
 lib/libsamsungRecord_zoom.so
 lib/libsamsungSoundbooster.so
 lib/lib_DNSe_NRSS_ver226.so
-lib/lib_SamsungRec_V04003.so
+lib/lib_SamsungRec_V03011b.so
 lib/lib_Samsung_AudioZoom_v100.so
 lib/lib_Samsung_Resampler.so
 lib/lib_Samsung_SB_AM_for_ICS_v04004.so

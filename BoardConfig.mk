@@ -27,7 +27,7 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := degasltexx,degaslte,T235,T235Y
+TARGET_OTA_ASSERT_DEVICE := degasltexx,degasltezt,degaslte
 
 # Filesystems
 # Note: the BOARD_...IMAGE_PARTITION_SIZE values define the image sizes, 

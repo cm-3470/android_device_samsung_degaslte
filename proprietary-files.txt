@@ -83,6 +83,7 @@ vendor/lib/hw/keystore.exynos3.so
 # LPM
 bin/lpm
 # Needed by lpm
+lib/libQmageDecoder.so
 lib/libmaet.so
 lib/libsxqk_skia.so
 media/battery_batteryerror.qmg

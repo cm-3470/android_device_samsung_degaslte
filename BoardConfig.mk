@@ -79,7 +79,7 @@ TARGET_INIT_VENDOR_LIB := libinit_degaslte
 TARGET_LIBINIT_DEFINES_FILE := device/samsung/degaslte/init/init_degaslte.cpp
 
 # TWRP
-TW_SCREEN_BLANK_ON_BOOT := true
+TW_NO_SCREEN_BLANK := true
 TW_THEME := landscape_hdpi
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true

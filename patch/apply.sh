@@ -17,11 +17,7 @@ for i in $(find "$PATCHBASE"/* -type d); do
         cd $CMBASE/bootable/recovery
         recovery_url=`git config --get remote.github.url`
         cd -
-        if [ ! "$recovery_url" = "https://github.com/CyanogenMod/android_bootable_recovery" ]; then
-            echo "WARN: Recovery does not seem to be CM one -> patches will not be applied"
-            continue
-        fi
-    fi
+	fi
 
 	echo
 	echo applying $PATCHNAME to $PATCHTARGET

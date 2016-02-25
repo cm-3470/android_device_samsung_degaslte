@@ -1,5 +1,9 @@
 # Device configuration for Samsung Galaxy Tab 4 7.0 LTE SM-T235 (degaslte)
 
+## Important
+
+This tree is currently WIP meaning that it may not even boot at it's current state!
+
 ## Spec Sheet
 
 | Feature                 | Specification                     |
@@ -22,22 +26,55 @@
 
 ![Samsung Galaxy Tab 4 7.0](http://images.samsung.com/is/image/samsung/de_SM-T235NYKADBT_000241627_Front_black?$DT-Gallery$ "Samsung Galaxy Tab 4 7.0")
 
-## Copyright
+## How to build
 
+0. Open a terminal at the top of your CyanogenMod 13 dir
+
+1. Next clone the local manifests by running :
+
+```Shell
+git clone https://github.com/cm-3470/android_.repo_local_manifests -b cm-13.0 .repo/local_manifests
 ```
-#
-# Copyright (C) 2014 The CyanogenMod Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+
+however if you already obtian local manifests ftrom a different device, just copy the following file into .repo/local_manifests :
+```html
+https://github.com/cm-3470/android_.repo_local_manifests/blob/cm-13.0/degaslte.xml
 ```
+
+2. Once that is done, sync to sources by running the following in your terminal :
+
+```python
+repo sync
+```
+
+3. Once the sync is done, run envsetup.sh :
+```makefile
+. build/envsetup.sh
+```
+
+4. Now run the degaslte specific patches by entering :
+```Shell
+bash device/samsung/degaslte/patch/apply.sh
+```
+
+5. Now open the lunch menu by entering
+```Shell
+lunch
+```
+
+6. If you see the device on the list, you have successfully synced the sources. Now enter the following :
+```Shell
+cm_degaslte-userdebug
+```
+
+7. You're now set to compile CyanogenMod, just run the following to start compiling :
+```Shell
+make bacon
+```
+
+8. After the compile is done, the CM package will appear in your out directory. As default, it is set in :
+```
+out/target/product/degaslte/
+```
+
+9. You have now successfully compiled CyanogenMod for degaslte!

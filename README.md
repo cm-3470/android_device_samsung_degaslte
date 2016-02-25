@@ -28,9 +28,9 @@ This tree is currently WIP meaning that it may not even boot at it's current sta
 
 ## How to build
 
-0. Open a terminal at the top of your CyanogenMod 13 dir
+- Open a terminal at the top of your CyanogenMod 13 dir
 
-1. Next clone the local manifests by running :
+- Next clone the local manifests by running :
 
 ```Shell
 git clone https://github.com/cm-3470/android_.repo_local_manifests -b cm-13.0 .repo/local_manifests
@@ -41,40 +41,40 @@ however if you already obtian local manifests ftrom a different device, just cop
 https://github.com/cm-3470/android_.repo_local_manifests/blob/cm-13.0/degaslte.xml
 ```
 
-2. Once that is done, sync to sources by running the following in your terminal :
+- Once that is done, sync to sources by running the following in your terminal :
 
 ```python
 repo sync
 ```
 
-3. Once the sync is done, run envsetup.sh :
+- Once the sync is done, run envsetup.sh :
 ```makefile
 . build/envsetup.sh
 ```
 
-4. Now run the degaslte specific patches by entering :
+- Now run the degaslte specific patches by entering :
 ```Shell
 bash device/samsung/degaslte/patch/apply.sh
 ```
 
-5. Now open the lunch menu by entering
+- Now open the lunch menu by entering
 ```Shell
 lunch
 ```
 
-6. If you see the device on the list, you have successfully synced the sources. Now enter the following :
+- If you see the device on the list, you have successfully synced the sources. Now enter the following :
 ```Shell
 cm_degaslte-userdebug
 ```
 
-7. You're now set to compile CyanogenMod, just run the following to start compiling :
+- You're now set to compile CyanogenMod, just run the following to start compiling :
 ```Shell
 make bacon
 ```
 
-8. After the compile is done, the CM package will appear in your out directory. As default, it is set in :
+- After the compile is done, the CM package will appear in your out directory. As default, it is set in :
 ```
 out/target/product/degaslte/
 ```
 
-9. You have now successfully compiled CyanogenMod for degaslte!
+- You have now successfully compiled CyanogenMod for degaslte!

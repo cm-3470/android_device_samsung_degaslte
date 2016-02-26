@@ -50,6 +50,10 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 2147483648
 # Audio
 TARGET_EXYNOS3_AUDIO_FROM_SOURCE := false
 
+# Sound
+# Lollipop Audio HAL is incompatible with Android M (see http://review.cyanogenmod.org/#/c/121831/)
+TARGET_TINY_ALSA_IGNORE_SILENCE_SIZE := true
+
 # Include path
 TARGET_SPECIFIC_HEADER_PATH += device/samsung/degaslte/include
 

@@ -78,6 +78,11 @@ TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_degaslte
 TARGET_LIBINIT_DEFINES_FILE := device/samsung/degaslte/init/init_degaslte.cpp
 
+# Don't take forever to wipe
+BOARD_SUPPRESS_SECURE_ERASE := true
+COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+
+
 # TWRP
 TW_NO_SCREEN_BLANK := true
 TW_THEME := landscape_hdpi

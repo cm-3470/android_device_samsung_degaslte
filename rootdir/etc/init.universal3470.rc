@@ -318,11 +318,6 @@ on fs
 #MPL
     chown system radio /sys/bus/iio/devices/iio:device0
     chmod 0660 /sys/bus/iio/devices/iio:device0
-    
-service sensorservice /system/bin/sensorservice
-    class main
-    user system
-    group system
 
 # deferred initcall
 #service sec-sh /system/bin/sh /system/etc/init.sec.boot.sh

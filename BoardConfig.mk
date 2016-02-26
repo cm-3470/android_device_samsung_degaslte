@@ -58,7 +58,7 @@ TARGET_TINY_ALSA_IGNORE_SILENCE_SIZE := true
 TARGET_SPECIFIC_HEADER_PATH += device/samsung/degaslte/include
 
 # Kernel
-TARGET_KERNEL_CONFIG := degaslte_00_defconfig
+TARGET_KERNEL_CONFIG := cm_degaslte_00_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/degaslte
 
 # CMHW

@@ -61,6 +61,9 @@ TARGET_SPECIFIC_HEADER_PATH += device/samsung/degaslte/include
 TARGET_KERNEL_CONFIG := cm_degaslte_00_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/degaslte
 
+# GUI (Avoid Crash after entering sleep)
+BOARD_EGL_NEEDS_HANDLE_VALUE := true
+
 # CMHW
 BOARD_HARDWARE_CLASS := device/samsung/degaslte/cmhw
 

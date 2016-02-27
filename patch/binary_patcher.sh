@@ -2,7 +2,7 @@
 
 CURRENT_DIR=$(dirname $(readlink -f $0))
 CM_BASE_DIR=$CURRENT_DIR/../../../..
-VENDOR_DIR=$CM_BASE_DIR/vendor/samsung/kminilte/proprietary
+VENDOR_DIR=$CM_BASE_DIR/vendor/samsung/degaslte/proprietary
 
 # replace_all <old> <new> <file>
 # binary string replacement

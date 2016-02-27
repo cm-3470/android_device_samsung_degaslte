@@ -1,7 +1,7 @@
 From b0b5ea2152302532888642d5c8a7ff7a7a777ae7 Mon Sep 17 00:00:00 2001
 From: tobigun <hennymcc@yahoo.de>
 Date: Sun, 14 Feb 2016 13:11:02 +0100
-Subject: [PATCH] ril: adjust ril commands to T235
+Subject: [PATCH] ril: adjust ril commands to G800F
 
 Change-Id: I9e2c040098e3c0ef2f414a6689be1207cac039fa
 ---

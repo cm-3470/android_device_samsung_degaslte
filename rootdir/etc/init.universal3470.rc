@@ -253,9 +253,6 @@ on fs
     chown system system /sys/class/sec/tsp/input/enabled
 
 # Permissions for touchkey
-    chmod 0660 /sys/class/sec_touchkey/input/enabled
-    chown system system /sys/class/sec/sec_touchkey/input/enabled
-
     chown system radio /sys/class/sec/sec_touchkey/touchkey_recent
     chown system radio /sys/class/sec/sec_touchkey/touchkey_back
     chown system radio /sys/class/sec/sec_touchkey/touchkey_threshold

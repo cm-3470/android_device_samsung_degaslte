@@ -25,24 +25,23 @@ index 6ed67a3..6cab57c 100644
  endif
  endif
 diff --git a/ril/libril/Android.mk b/ril/libril/Android.mk
-index c31b382..d5b4c4e 100644
+index c5e1c5e..c2955bf 100644
 --- a/ril/libril/Android.mk
 +++ b/ril/libril/Android.mk
-@@ -34,8 +34,11 @@ endif
- ifeq ($(BOARD_MODEM_TYPE),m7450)
- LOCAL_CFLAGS := -DMODEM_TYPE_M7450
+@@ -28,8 +28,11 @@ endif
+ ifeq ($(BOARD_MODEM_TYPE),xmm6260)
+ LOCAL_CFLAGS := -DMODEM_TYPE_XMM6260
  endif
--ifneq ($(filter ss333 mdm9x35,$(BOARD_MODEM_TYPE)),)
-+ifneq ($(filter ss222 ss333 mdm9x35,$(BOARD_MODEM_TYPE)),)
+-ifneq ($(filter m7450 mdm9x35 ss333 xmm7260,$(BOARD_MODEM_TYPE)),)
++ifneq ($(filter m7450 mdm9x35 ss222 ss333 xmm7260,$(BOARD_MODEM_TYPE)),)
  LOCAL_CFLAGS := -DSAMSUNG_NEXT_GEN_MODEM
 +ifneq ($(BOARD_MODEM_TYPE),ss222)
 +LOCAL_CFLAGS += -DVIDEO_CALL_NOT_SUPPORTED
 +endif
  endif
  
- LOCAL_C_INCLUDES += $(TARGET_OUT_HEADER)/librilutils
-diff --git a/ril/libril/ril.cpp b/ril/libril/ril.cpp
-index f1fecc8..c2b2060 100644
+ ifneq ($(filter m7450 xmm7260,$(BOARD_MODEM_TYPE)),)
+
 --- a/ril/libril/ril.cpp
 +++ b/ril/libril/ril.cpp
 @@ -173,6 +173,8 @@ static pthread_t s_tid_dispatch;

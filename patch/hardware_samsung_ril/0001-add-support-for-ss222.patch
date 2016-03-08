@@ -42,6 +42,8 @@ index c5e1c5e..c2955bf 100644
  
  ifneq ($(filter m7450 xmm7260,$(BOARD_MODEM_TYPE)),)
 
+diff --git a/ril/libril/ril.cpp b/ril/libril/ril.cpp
+index f1fecc8..c2b2060 100644
 --- a/ril/libril/ril.cpp
 +++ b/ril/libril/ril.cpp
 @@ -173,6 +173,8 @@ static pthread_t s_tid_dispatch;

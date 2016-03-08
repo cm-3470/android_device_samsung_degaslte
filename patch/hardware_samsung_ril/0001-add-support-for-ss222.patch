@@ -36,14 +36,14 @@ index c5e1c5e..c2955bf 100644
 +ifneq ($(filter m7450 mdm9x35 ss222 ss333 xmm7260,$(BOARD_MODEM_TYPE)),)
  LOCAL_CFLAGS := -DSAMSUNG_NEXT_GEN_MODEM
 +ifneq ($(BOARD_MODEM_TYPE),ss222)
-+LOCAL_CFLAGS += -DVIDEO_CALL_NOT_SUPPORTED
++LOCAL_CFLAGS += -DNEEDS_VIDEO_CALL_FIELD
 +endif
  endif
  
  ifneq ($(filter m7450 xmm7260,$(BOARD_MODEM_TYPE)),)
 
 diff --git a/ril/libril/ril.cpp b/ril/libril/ril.cpp
-index f1fecc8..c2b2060 100644
+index 888ee48..7cf5e0f 100644
 --- a/ril/libril/ril.cpp
 +++ b/ril/libril/ril.cpp
 @@ -173,6 +173,8 @@ static pthread_t s_tid_dispatch;
@@ -55,16 +55,7 @@ index f1fecc8..c2b2060 100644
  static int s_fdDebug = -1;
  static int s_fdDebug_socket2 = -1;
  
-@@ -2390,7 +2392,7 @@ static int responseCallList(Parcel &p, void *response, size_t responselen) {
-         p.writeInt32(p_cur->isVoice);
- 
- #if defined(MODEM_TYPE_XMM7260) || defined(MODEM_TYPE_M7450) || defined(SAMSUNG_NEXT_GEN_MODEM)
--#ifndef SAMSUNG_NEXT_GEN_MODEM
-+#ifndef VIDEO_CALL_NOT_SUPPORTED
-         p.writeInt32(p_cur->isVideo);
- #endif
- 
-@@ -5045,6 +5047,14 @@ void RIL_onUnsolicitedResponse(int unsolResponse, const void *data,
+@@ -5040,6 +5042,14 @@ void RIL_onUnsolicitedResponse(int unsolResponse, const void *data,
                                              &TIMEVAL_WAKE_TIMEOUT);
      }
  
@@ -79,7 +70,7 @@ index f1fecc8..c2b2060 100644
      // Normal exit
      return;
  
-@@ -5054,6 +5064,14 @@ error_exit:
+@@ -5049,6 +5059,14 @@ error_exit:
      }
  }
  
@@ -94,6 +85,7 @@ index f1fecc8..c2b2060 100644
  /** FIXME generalize this if you track UserCAllbackInfo, clear it
      when the callback occurs
  */
+
 diff --git a/ril/libsecril-client/Android.mk b/ril/libsecril-client/Android.mk
 index 71cdc60..c598eff 100755
 --- a/ril/libsecril-client/Android.mk

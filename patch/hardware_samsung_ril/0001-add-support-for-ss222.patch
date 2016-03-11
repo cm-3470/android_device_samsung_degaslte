@@ -1,6 +1,8 @@
 From 76ff081cefcc057ea8c9ae2f174f23c2bf6fd247 Mon Sep 17 00:00:00 2001
 From: tobigun <hennymcc@yahoo.de>
 Date: Sun, 21 Feb 2016 21:58:12 +0100
+From: CTXz <ctx.xda@gmail.com>
+Date: Fri, 11 Mar 2016 22:00:57 +0100
 Subject: [PATCH] ril: add support for ss222 (G800F/Y/M)
 
 Change-Id: I818eb8169aa3f1e1a5a9ed47eb4e58b95dd23ea6
@@ -87,19 +89,22 @@ index 888ee48..7cf5e0f 100644
  */
 
 diff --git a/ril/libsecril-client/Android.mk b/ril/libsecril-client/Android.mk
-index 71cdc60..c598eff 100755
+index 69a2f11..2c8e70b 100755
 --- a/ril/libsecril-client/Android.mk
 +++ b/ril/libsecril-client/Android.mk
-@@ -18,6 +18,9 @@ LOCAL_CFLAGS :=
+@@ -18,6 +18,11 @@ LOCAL_CFLAGS :=
  ifeq ($(TARGET_BOARD_PLATFORM),exynos4)
  LOCAL_CFLAGS += -DRIL_CALL_AUDIO_PATH_EXTRAVOLUME
  endif
++
 +ifeq ($(TARGET_SOC),exynos3470)
 +LOCAL_CFLAGS += -DRIL_CALL_AUDIO_PATH_EXTRAVOLUME
 +endif
- 
- LOCAL_MODULE:= libsecril-client
- LOCAL_PRELINK_MODULE := false
++
+ ifneq ($(filter m7450 mdm9x35 ss333 xmm7260,$(BOARD_MODEM_TYPE)),)
+ LOCAL_CFLAGS += -DSAMSUNG_NEXT_GEN_MODEM
+ endif
+
 -- 
 1.9.1
 

@@ -54,7 +54,7 @@ repo sync
 
 - Now run the degaslte specific patches by entering :
 ```Shell
-bash device/samsung/degaslte/patch/apply.sh
+bash device/samsung/smdk3470-common/patch/apply.sh
 ```
 
 - Now open the lunch menu by entering

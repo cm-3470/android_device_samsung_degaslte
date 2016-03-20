@@ -195,7 +195,6 @@ etc/wifi/bcmdhd_sta.bin_b2
 etc/wifi/nvram_net.txt
 
 # Audio
-lib/hw/audio.vendor.universal3470.so
 lib/libaudio-ril.so
 lib/libsamsungRecord.so
 lib/libsamsungRecord_ns.so

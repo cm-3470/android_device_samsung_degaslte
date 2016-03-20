@@ -36,9 +36,10 @@ This tree is currently WIP meaning that it may not even boot at it's current sta
 git clone https://github.com/cm-3470/android_.repo_local_manifests -b cm-13.0 .repo/local_manifests
 ```
 
-however if you already obtian local manifests ftrom a different device, just copy the following file into .repo/local_manifests :
+however if you already obtian local manifests ftrom a different device, just copy at least the following files into .repo/local_manifests :
 ```html
 https://github.com/cm-3470/android_.repo_local_manifests/blob/cm-13.0/degaslte.xml
+https://github.com/cm-3470/android_.repo_local_manifests/blob/cm-13.0/common.xml
 ```
 
 - Once that is done, sync to sources by running the following in your terminal :

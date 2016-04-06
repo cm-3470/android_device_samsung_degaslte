@@ -66,6 +66,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.exynos3
 
+# Sensors
+PRODUCT_PACKAGES += \
+   sensors.universal3470
+
+
 # IR
 # no IR
 

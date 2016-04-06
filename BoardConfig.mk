@@ -73,6 +73,9 @@ TARGET_RECOVERY_FSTAB := device/samsung/degaslte/rootdir/etc/fstab.universal3470
 # PowerHAL
 TARGET_POWERHAL_VARIANT := exynos3
 
+# Sensors
+TARGET_PROVIDES_LIBSENSORS := true
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
